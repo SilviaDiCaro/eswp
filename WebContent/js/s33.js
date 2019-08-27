@@ -4,6 +4,6 @@
  * Example from Slide 33
  */
 
-let heading = document.querySelector('h2');
-h2.textContent = 'Hello!';
-console.log('hello!');
+let header = document.querySelector('h2');//qselector seleziona uno o più nodi dell'albero che rispondono a questa richiesta
+header.textContent = 'Hello!'; //questo è il testo che risulta
+console.log('hello!');//questo è ciò che viene stampato dalla console (ctrl+shift+i...)

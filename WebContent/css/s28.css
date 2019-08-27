@@ -1,5 +1,5 @@
 body {
-    background-color: gray;
+    background-color: #ecdde7;
 }
 
 p {
@@ -11,7 +11,7 @@ p {
 }
 
 h1, h2, h3 {
-    color: yellow;
+    color: #800040;
 }
 
 .myClass {
@@ -19,16 +19,16 @@ h1, h2, h3 {
 }
 
 p.myClass {
-    color: blue;
+    color: #0080c0;
 }
 
 #paragraphId {
-    color: red;
+    color: #ff0080;
 }
 
 #blockId {
-    border: 3px solid #ff8000;
-    background-color: #ffff80;
+    border: 3px solid #8080ff;
+    background-color: #ffffb9;
 }
 
 .boldCls {

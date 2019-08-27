@@ -1,0 +1,50 @@
+input {
+	color: blu;
+}
+
+body {
+	background-color: #e6fffe;
+}
+
+
+h1, h2, h3 {
+    color: #004080;
+}
+
+p {
+	font-family: fantasy;
+}
+
+[type=number] {
+	background-color: #0000ff;
+}
+
+#blockId {
+	border: 3px solid #c0c0c0;
+	background-color: #ffffff;
+}
+
+#blockId2 {
+	border: 3px solid #c0c0c0;
+	background-color: #ffffff;
+}
+
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 50%
+}
+
+td, th {
+    border: 1px solid #626262;
+    padding: 3px;
+    text-align: center;
+}
+
+th {
+    background-color: #409fff;
+}
+
+td {
+    background-color: lightblue;
+}

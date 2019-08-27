@@ -14,11 +14,11 @@
     <textarea id="target" rows="20" cols="80"></textarea>
 
     <script type="text/javascript">
-        let target = document.getElementById('target');
+        let target = document.getElementById('target');//lavora SOLO sugli id. Ritorna o qualcosa o nulla.
 
         // string
         let name = 'Bob';
-        target.value += 'hello ' + name + '\n';
+        target.value += 'hello ' + name + '\n'; //name è Bob. \n è per andare a capo
 
         // number
         let value = 42;
@@ -26,7 +26,7 @@
         
         // boolean
         let flag = true;
-        target.value += flag + '\n';
+        target.value += flag + '\n';//booleano convertito in stringa
         
         // object
         let dog = { name : 'Zip', breed : 'Alsatian' };

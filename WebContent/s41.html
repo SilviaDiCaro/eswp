@@ -35,6 +35,14 @@
         data.push('push');
         data.unshift('unshift');
         target.value += 'final status: ' + data + '\n';
+        
+        let array = [];
+        for(let i =0; i<10;i++){
+        	if(i !==7){
+        		array.push(i);
+        	}
+        }
+        target.value += 'array ' + array +'\n';
     </script>
 </body>
 </html>

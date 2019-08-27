@@ -53,7 +53,7 @@
             target.value += 'x is ' + x + '\n';
         }
 
-        x = '';
+        x = '';//stringa vuota, passa a else
         if(x) {
             target.value += '?!\n';
         } else {
@@ -62,7 +62,7 @@
         }
 
 
-        x = 'false';
+        x = 'false'; //è una stringa
         if(x) {
             target.value += 'the string "' + x + '" is true\n';
         } else {

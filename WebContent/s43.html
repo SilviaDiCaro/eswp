@@ -25,15 +25,15 @@
             break;
         }
 
-        let i = 10
+        let i = 10;
         do {
             if(i < 0 || i > 3) {
                 i = 0;
-                continue;
+                continue;//va alla fine del loop, cioè alla riga 36 in questo caso
             }
             target.value += 'do-while ' + i + '\n';
             i++;
-        } while (i < 3);
+        } while (i < 3);//quando arriva a 3, legge la riga 36 ed esce dal loop 
      </script>
 </body>
 </html>

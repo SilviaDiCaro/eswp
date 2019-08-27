@@ -3,6 +3,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Curriculum</title>
+
+<link rel="stylesheet" type="text/css" href="./css/Curriculum.css" />
+
 </head>
 <body>
 	<h1>Curriculum Vitae</h1>
@@ -10,85 +13,100 @@
 	<p>
 		<img src="./pic/Europass.jpg" />
 	</p>
-
+<hr>
 	<h2>Silvia Di Caro</h2>
-	<h3>
+
+ <hr/>
+	
+	<h4>
 		La mia mail: <a href="mailto:silviadicaro@libero.it">silviadicaro@libero.it</a>
 		<br> 3291234567<br> Via ciaociao 4, Palermo
-	</h3>
+	</h4>
 
-	<h2>Contatto diretto</h2>
+	<h2><i>Contatto diretto</i></h2>
 
-	<div>
-		<input type="radio" id="favPa" name="fav" value="Palermo" checked />
-		<label for="favPa">Palermo</label> <input type="radio" id="favRo"
-			name="fav" value="Roma" /> <label for="favRo">Roma</label> <input
-			type="radio" id="favMi" name="fav" value="Milano" /> <label
-			for="favMi">Milano</label>
+	<div id="blockId">
+
+		<div>
+			<input type="radio" id="favPa" name="fav" value="Palermo" checked />
+			<label for="favPa">Palermo</label> <input type="radio" id="favRo"
+				name="fav" value="Roma" /> <label for="favRo">Roma</label> <input
+				type="radio" id="favMi" name="fav" value="Milano" /> <label
+				for="favMi">Milano</label>
+		</div>
+
 	</div>
-
-
+	<br>
 	<form action="/comment" method="post">
 		<div>
 			Nome: <input type="text" name="Nome" required />
-		</div> <br>
+		</div>
+		<br>
 		<div>
 			Cognome: <input type="text" name="Cognome" required />
-		</div><br>
+		</div>
+		<br>
 		<div>
 			Recapito telefonico: <input type="text" name="cell" required />
-		</div><br>
+		</div>
+		<br>
 		<div>
 			<label for="name">Indirizzo e-mail:</label> <input type="text"
 				id="name" name="sender">
-		</div><br>
+		</div>
+		<br>
 		<div>
 			<label for="msg">Motivo del contatto:</label>
 			<textarea id="msg" name="message"></textarea>
-		</div><br>
+		</div>
+		<br>
 		<div>
 			Data odierna: <input type="date" name="milestone" />
-		</div><br>
+		</div>
+		<br>
 		<div>
 			<button type="submit">Invio</button>
 		</div>
 
-		<h3>Tipologia di contratto</h3>
-		<div>
-			<input type="checkbox" id="langTi" name="lang"
-				value="Tempo indeterminato" checked /> <label for="langTi">Tempo
-				indeterminato</label> <input type="checkbox" id="langPy" name="lang"
-				value="Part time" /> <label for="langPt">Part time</label> <input
-				type="checkbox" id="langTd" name="lang" value="Tempo determinato"
-				checked /> <label for="langdeterminato">Tempo determinato</label>
-		</div><br>
-		
-		<h3> Tipologia di contratto, prova 2 </h3><br>
-		 <div>
-            <select name="contratto">
-                <option value="none">-</option>
-                <option value="Tempo indeterminato" selected>Tempo indeterminato</option>
-                <option value="Tempo determinato">Tempo determinato</option>
-                <option value="Part Time">Part Time</option>
-            </select>
+		<h3><i>Tipologia di contratto</i></h3>
+		<div id="blockId2">
+			<div>
+				<input type="checkbox" id="langTi" name="lang"
+					value="Tempo indeterminato" checked /> <label for="langTi">Tempo
+					indeterminato</label> <input type="checkbox" id="langPy" name="lang"
+					value="Part time" /> <label for="langPt">Part time</label> <input
+					type="checkbox" id="langTd" name="lang" value="Tempo determinato"
+					checked /> <label for="langdeterminato">Tempo determinato</label>
+			</div>
+		</div>
+		<br>
 
-            <input type="submit" value="Invio" />
-        </div>
-        
+		<h3><i>Tipologia di contratto, prova 2</i></h3>
+		<br>
+		<div>
+			<select name="contratto">
+				<option value="none">-</option>
+				<option value="Tempo indeterminato" selected>Tempo
+					indeterminato</option>
+				<option value="Tempo determinato">Tempo determinato</option>
+				<option value="Part Time">Part Time</option>
+			</select> <input type="submit" value="Invio" />
+		</div>
+
 	</form>
 
 	<h4>
-		Itruzione e formazione <br>
+		<i>Itruzione e formazione </i><br>
 	</h4>
 
 
 	<ul>
-		<li>2017-data corrente Studentessa, corso di laurea magistrale in
-			Ingegneria Energetica e Nucleare <br></li> 
-		<li>2015 Corso "smaltimento dei rifiuti radioattivi"</li>
-		<li>2011-2016 Laurea in Ingegneria dell'Energia, curriculum:
-			Energetica e Nucleare <br></li>
-		<li>2006-2011 Diploma di maturità classica, liceo classico
+		<li><b>2017-data</b> corrente Studentessa, corso di laurea
+			magistrale in Ingegneria Energetica e Nucleare <br></li>
+		<li><b>2015</b> Corso "smaltimento dei rifiuti radioattivi"</li>
+		<li><b>2011-2016</b> Laurea in Ingegneria dell'Energia,
+			curriculum: Energetica e Nucleare <br></li>
+		<li><b>2006-2011</b> Diploma di maturità classica, liceo classico
 			Statale "G. Meli", Palermo
 	</ul>
 
@@ -117,16 +135,17 @@
 
 
 	<h4>
-		Esperienze lavorative <br>
+		<i>Esperienze lavorative</i> <br>
 	</h4>
 
 	<ul>
-		<li>07/2019-data corrente Corso di formazione presso OverNet
-			education, Rozzano(MI)<br></li>
-		<li>03/2019-05/2019 Tirocinio presso CNR, Palermo<br></li>
-		<li>08/2018 Pubblicazione su rivista scientifica di classe A<br></li>
-		<li>2015 Tirocinio presso Azienda Universitaria Policlinico
-			Giaccone, Area di Medicina Nucleare, Palermo</li>
+		<li><b>07/2019-data corrente</b> Corso di formazione presso
+			OverNet education, Rozzano(MI)<br></li>
+		<li><b>03/2019-05/2019</b> Tirocinio presso CNR, Palermo<br></li>
+		<li><b>08/2018</b> Pubblicazione su rivista scientifica di classe
+			A<br></li>
+		<li><b>2015</b> Tirocinio presso Azienda Universitaria
+			Policlinico Giaccone, Area di Medicina Nucleare, Palermo</li>
 	</ul>
 
 

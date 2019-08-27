@@ -12,18 +12,18 @@
 
     <textarea id="target" rows="20" cols="80"></textarea>
     <div>
-        <button onclick="getText();">Get text</button>
+        <button onclick="getText();">Get text</button>//il bottone, quando ci si clicca esegue la chiamata alla funzione getText 
         <button onclick="getTextDetailed();">Get text w/ details</button>
     </div>
 
     <script type="text/javascript">
         function callback() {
-            let target = document.getElementById('target');
+            let target = document.getElementById('target'); 
 
         	try {
-                switch (this.readyState) {
-                case XMLHttpRequest.OPENED:
-                    target.value += "[Server connection established]\n";
+                switch (this.readyState) {//switch su readystate, stato dell'oggetto xhr che sta gestendo la connessione. arriva una risposta dal server e siamo sulla callback che vede lo stato di xhr settata dalla risposta del server.
+                case XMLHttpRequest.OPENED: //se lo stato è opened scrivo qualcosa
+                    target.value += "[Server connection established]\n";//this-->oggetto corrente, in questo caso xhr che gestisce il traffico tra noi e il server
                     return;
                 case XMLHttpRequest.HEADERS_RECEIVED:
                     target.value += "[Request received]\n";
@@ -31,7 +31,7 @@
                 case XMLHttpRequest.LOADING:
                     target.value += "[Processing request]\n";
                     return;
-                case XMLHttpRequest.DONE:
+                case XMLHttpRequest.DONE://mi interessa qui in cui la risposta è pronta
                     target.value += "[Response is ready]\n";
                     break;
                 default:
@@ -39,29 +39,31 @@
                     target.value += "[Request not initialized or error " + this.readyState + "]\n";
                     return;
                 }
-            } catch (e) {
+            } catch (e) { //manca il tipo di eccezione rispetto a java
                 target.value += "[Exception: " + e + "]\n";
 	            return;
             }
 
-            if (this.status != 200) {
+            if (this.status != 200) { //risposta http quando è andato tutto bene. se lo status è diverso da 200, qualcosa è andato storto. Da 400 in avanti qualcosa è andato male
                 target.value += "[Something went wrong: " + this.status + "]\n";
                 return;
             }
 
-            target.value += this.responseText;
+            target.value += this.responseText; //append la responseText. Response vista come testo semplice
         }
 
         function getTextDetailed() {
-            let request = new XMLHttpRequest();
-            request.onreadystatechange = callback;
-            request.open("GET", "/eswp/s45.txt");
-            request.send();
+            let request = new XMLHttpRequest(); //creo un oggetto
+            request.onreadystatechange = callback; //a request dico che quando viene caricato va associato a callback(altra funzione). Quando arriva la risposta dal server, chiama callback. Onload è una proprietà di request (proprietà accedibile all'esterno, è pubblica!Cosa che in java non vogliamo)
+            request.open("GET", "/eswp/s45.txt");//metodo open prepara la chiamata (metodo http che voglio usare, parametro che dice quale risorsa richiedo al server cioè il file hello)
+            request.send();//send-->manda la richiesta al server che legge s45.txt e la manda indietro come response che arriva a request che vede callback perché è settata come onload
+      //onreadystatechange viene chiamata a ogni passo intermedio in realtà. 
+      //callback è un nome che do io
         }
 
         function getText() {
             let request = new XMLHttpRequest();
-            request.onload = callback;
+            request.onload = callback; 
             request.open("GET", "/eswp/s45.txt");
             request.send();
         }
