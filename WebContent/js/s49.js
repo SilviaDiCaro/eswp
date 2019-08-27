@@ -8,7 +8,7 @@ $(function() {
     
     $('a').click(function(event) {
         alert('You should not use any link on this page!');
-     //   event.preventDefault();
+        event.preventDefault();
     });
 
     $('html').dblclick(function(e) {
