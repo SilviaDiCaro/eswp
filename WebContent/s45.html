@@ -20,7 +20,7 @@
         function callback() {
             let target = document.getElementById('target'); 
 
-        	try {
+        	try {//callback è associato a una proprietà dell'oggetto request che a sua volta è oggetto di XHR
                 switch (this.readyState) {//switch su readystate, stato dell'oggetto xhr che sta gestendo la connessione. arriva una risposta dal server e siamo sulla callback che vede lo stato di xhr settata dalla risposta del server.
                 case XMLHttpRequest.OPENED: //se lo stato è opened scrivo qualcosa
                     target.value += "[Server connection established]\n";//this-->oggetto corrente, in questo caso xhr che gestisce il traffico tra noi e il server
